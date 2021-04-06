@@ -14,19 +14,34 @@ with open(bank_path) as bankcsv:
  greatestincrease = []
  greatestdecrease = []
  profits_loss = []
- 
+ main=[]
+
+   #
  for x in csvreader:
+  
    profits_loss.append(int(x[1]))
+ dates=86
 change-=int(x[1])
+rate_change=change/dates
+print(dates)
 print(change)
 #print(profits_loss)
+print(rate_change)
 netprofit = sum(profits_loss)
 print(netprofit)
 
-   
+bigchange=str(max(profits_loss))
+print(max(profits_loss))
+print(min(profits_loss))
+  
+for i in csvreader: 
+   if i[1]==bigchange :
+    print(x)
+
+   #maybe make a date list and zip the list with profits_loss 
    
  
-  # dates=dates+(len(list(csvreader)))
+  # dates=dates+(len(list(profits_loss)))
    #netprofit += int(row[1])    
    #change -=int(x[1])
    #avg_change=int(change/dates)

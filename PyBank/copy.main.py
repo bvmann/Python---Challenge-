@@ -13,22 +13,30 @@ with open(bank_path) as bankcsv:
  change = 0
  greatestincrease = []
  greatestdecrease = []
+ profits_loss = []
  
  for x in csvreader:
-     dates=dates+(len(list(csvreader)))
-     for i in x: 
-         netprofit += int(i[1])
-         change -=int(i[1])
-         avg_change=int(change/dates)
-         greatestincrease.append(i[1])
-         greatestdecrease.append(i[1])
-     
+   profits_loss.append(int(x[1]))
+change-=int(x[1])
+print(change)
+#print(profits_loss)
+netprofit = sum(profits_loss)
+print(netprofit)
 
-     print(min(greatestdecrease))
-     print(max(greatestincrease)) 
-     print(avg_change) 
-     print(netprofit)
-     print(dates)
+   
+   
+ 
+  # dates=dates+(len(list(csvreader)))
+   #netprofit += int(row[1])    
+   #change -=int(x[1])
+   #avg_change=int(change/dates)
+   #greatestincrease.append(x[1])
+   #greatestdecrease.append(x[1])
+      
+ 
+   #print(row[1])
+   #print(netprofit)
+   #print(greatestdecrease)
      
    # for z in csvreader: 
     #    change -=int(x[1])

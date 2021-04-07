@@ -18,9 +18,9 @@ with open(bank_path) as bankcsv:
 
    #
  for x in csvreader:
-  
+   main.append(x)
    profits_loss.append(int(x[1]))
- dates=86
+ dates=len(main)
 change-=int(x[1])
 rate_change=change/dates
 print(dates)
@@ -29,14 +29,18 @@ print(change)
 print(rate_change)
 netprofit = sum(profits_loss)
 print(netprofit)
-
+#print(main)
+smallchange=str(min(profits_loss))
 bigchange=str(max(profits_loss))
 print(max(profits_loss))
 print(min(profits_loss))
   
-for i in csvreader: 
+for i in main: 
    if i[1]==bigchange :
-    print(x)
+    print(i)
+for i in main:
+  if i[1]==smallchange : 
+    print(i)
 
    #maybe make a date list and zip the list with profits_loss 
    

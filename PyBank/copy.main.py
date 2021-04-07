@@ -23,7 +23,7 @@ with open(bank_path) as bankcsv:
  dates=len(main)
 change-=int(x[1])
 rate_change=change/dates
-print(dates)
+print("number of days ",(dates))
 print(change)
 #print(profits_loss)
 print(rate_change)
@@ -38,9 +38,9 @@ print(min(profits_loss))
 for i in main: 
    if i[1]==bigchange :
     print(i)
-for i in main:
-  if i[1]==smallchange : 
-    print(i)
+#for i in main:
+   elif i[1]==smallchange : 
+      print(i)
 
    #maybe make a date list and zip the list with profits_loss 
    

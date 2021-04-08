@@ -47,9 +47,10 @@ with open(poll_path) as pollcsv :
     print(candidate1count) 
     print(candidate2count)
     print(candidate3count)    
-    percentwonc0=candidate0count/votes_cast
+    percentwonc0=round(candidate0count/votes_cast, 2)
     print(percentwonc0)
 
-    print(f'{candidate2[1]}', " : ")
+    print(f'{candidate2[1]}', " : ",(percentwonc0),((candidate1count)) )
 
-    print(statistics.mode(candidate))
+    winner=(statistics.mode(candidate))
+    print(f'Winner is : ',(winner))

@@ -23,11 +23,11 @@ with open(bank_path) as bankcsv:
  dates=len(main)
 change-=int(x[1])
 #rate_change=change/dates
-rate_change2=(int(max(enumerate(profits_loss))[1])-int(min(enumerate(profits_loss))[1]))/dates
+rate_change2=round((int(max(enumerate(profits_loss))[1])-int(min(enumerate(profits_loss))[1]))/(dates-1),2)
 print("number of days ",(dates))
-print(change)
+#print(change)
 #print(profits_loss)
-print(rate_change)
+#print(rate_change)
 print(rate_change2)
 netprofit = sum(profits_loss)
 print(netprofit)

@@ -1,4 +1,4 @@
-# Python---Challenge-
+# Banking and Voting 
 
 The files titled main with the comment 'finished', are my completed scripts. 
 
